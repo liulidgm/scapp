@@ -1,0 +1,47 @@
+<template>
+  <div id="index">
+    <div id="swiper-container">
+      <mt-swipe :auto="2000">
+        <mt-swipe-item><img src="../assets/banner.png"></mt-swipe-item>
+        <mt-swipe-item><img src="../assets/banner.png"></mt-swipe-item>
+        <mt-swipe-item><img src="../assets/banner.png"></mt-swipe-item>
+      </mt-swipe>
+    </div>
+
+  </div>
+</template>
+
+<script type="text/ecmascript-6">
+  import { Swipe, SwipeItem } from 'mint-ui';
+
+  export default {
+    name: 'index',
+    data() {
+      return {};
+    },
+    components: {
+      Swipe,
+      SwipeItem
+    }
+  };
+
+</script>
+
+<style lang="scss">
+  @import 'src/style/mixin';
+
+  #index{
+    @include wh(100%,100%);
+    #swiper-container{
+      height:340px;
+      .mint-swipe {
+        .mint-swipe-item{
+          img{
+            @include wh(100%,auto);
+          }
+        }
+      }
+    }
+
+  }
+</style>

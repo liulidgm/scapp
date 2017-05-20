@@ -1,0 +1,10 @@
+/**
+ * Created by ylc on 2017/5/17.
+ */
+import fetch from '@/config/fetch'
+
+
+var cityGuess = () => fetch('POST', 'SCLogin/queryPersonalInfo.do', {});
+
+
+export {cityGuess}

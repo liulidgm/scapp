@@ -1,0 +1,24 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import index from '@/components/index'
+import hello from '@/components/Hello'
+import list from '@/pages/list/list'
+
+
+Vue.use(Router)
+
+export default new Router({
+  mode: 'history',
+  // hashbang: false,
+  // history: true,
+  routes: [{
+      path: '/',
+      component: index
+    },
+    {
+      path: '/list',
+      component: list
+    }
+  ]
+
+})
